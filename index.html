@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Contador</title>
+</head>
+<body>
+    <section>
+    <h1>Contador</h1>
+    <p id="result">0</p>
+    <button onclick="menos ()">menos</button>
+    <button onclick="mais ()">mais</button>
+    </section>
+    <script>
+        let numero = 0
+
+        function menos(){
+            numero--
+            render()
+        }
+        function mais(){
+            numero++
+            render()
+        }
+        function render() {
+            const p = document.querySelector('#result')
+            p.innerText = numero
+        }
+        render()
+    </script>
+
+</body>
+</html>
